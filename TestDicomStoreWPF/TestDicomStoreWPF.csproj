@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DicomLibrary\DicomLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Leadtools">
+      <HintPath>C:\LEADTOOLS22\Bin\net\Leadtools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Leadtools.Core">
+      <HintPath>C:\LEADTOOLS22\Bin\net\Leadtools.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Leadtools.Dicom">
+      <HintPath>C:\LEADTOOLS22\Bin\net\Leadtools.Dicom.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Leadtools.Dicom.Common">
+      <HintPath>C:\LEADTOOLS22\Bin\net\Leadtools.Dicom.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Leadtools.Dicom.Scu">
+      <HintPath>C:\LEADTOOLS22\Bin\net\Leadtools.Dicom.Scu.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
