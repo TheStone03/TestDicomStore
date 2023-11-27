@@ -28,20 +28,20 @@ namespace TestDicomStoreWPF
 
 		private void _PrintBtn_Click(object sender, RoutedEventArgs e)
 		{
-			
+			//Put the correct datas
 			DicomServer dicomServer = new DicomServer();
-			dicomServer.Address = IPAddress.Parse("10.0.39.195");
-			dicomServer.AETitle = "ATS_PRINTER";
-			dicomServer.Port = 4007;
+			dicomServer.Address = IPAddress.Parse("");
+			dicomServer.AETitle = "";
+			dicomServer.Port = 0000;
 			dicomServer.Timeout = 90;
 			try {
 
 				CEcho cecho = new CEcho();
 				cecho.Status += _Cecho_Status;
-				cecho.Echo(dicomServer, "PIETRO_TEST");
+				cecho.Echo(dicomServer, "TEST");
 
 				using (MyDicomPrintSCU printSCU = new MyDicomPrintSCU(null)) {
-					bool ret = printSCU.Associate(dicomServer.Address.ToString(), dicomServer.Port, dicomServer.AETitle, "PIETRO_TEST",
+					bool ret = printSCU.Associate(dicomServer.Address.ToString(), dicomServer.Port, dicomServer.AETitle, "TEST",
 										 DicomPrintScuPrintManagementClassFlags.BasicGrayscalePmMetaSopClass |
 										 DicomPrintScuPrintManagementClassFlags.BasicColorPmMetaSopClass |
 										 DicomPrintScuPrintManagementClassFlags.BasicAnnotationBoxSopClass |

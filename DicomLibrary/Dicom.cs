@@ -10,8 +10,9 @@ namespace DicomLibrary
 		/// </summary>
 		public static void DicomStart()
 		{
-			RasterSupport.SetLicense("C:\\Users\\Default\\Desktop\\ATS-Applicazione-T-ecnologie-Speciali-S.r.l.__MED22_2023-09-29_dev\\LEADTOOLS.LIC",
-					File.ReadAllText("C:\\Users\\Default\\Desktop\\ATS-Applicazione-T-ecnologie-Speciali-S.r.l.__MED22_2023-09-29_dev\\LEADTOOLS.LIC.KEY"));
+			// PUT the LICENSE
+			RasterSupport.SetLicense("",
+					File.ReadAllText(""));
 
 			//Make sure to initialize the DICOM engine, this needs to be done only once  
 			//In the whole application
